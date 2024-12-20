@@ -1,0 +1,113 @@
+@import 'vars';
+@import 'fonts';
+
+.book_img {
+    width:170px;
+    height: 280px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 20px;
+    perspective: 1000px;
+  }
+  
+  @keyframes initAnimation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-41deg);
+    }
+  }
+  
+  .book_cover {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-41deg);
+    transition: 1s ease;
+    animation: 1s ease 0s 1 initAnimation;
+  }
+  
+  .book_img:hover .book_cover, 
+  .book_img:focus .book_cover {
+    transform: rotateY(0deg);
+  }
+  
+  .book_cover > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $brown;
+    width: 125px;
+    height: 225px;
+    transform: translateZ(15px);
+    box-shadow: 5px 5px 20px $dark_gray;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+
+    .title{
+      color: white;
+      @include main-font(400, 14);
+      text-align: start;
+
+    }
+
+    .subtitle{
+      color: white;
+      @include main-font(400, 10);
+      text-align: start;
+    }
+
+
+}
+
+  
+  .book_cover::before {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    top: 5px;
+    width: 28px;
+    height: 215px;
+    transform: translateX(105px) rotateY(90deg);
+    background: linear-gradient(90deg, 
+      #fff 0%,
+      #f9f9f9 5%,
+      #fff 10%,
+      #f9f9f9 15%,
+      #fff 20%,
+      #f9f9f9 25%,
+      #fff 30%,
+      #f9f9f9 35%,
+      #fff 40%,
+      #f9f9f9 45%,
+      #fff 50%,
+      #f9f9f9 55%,
+      #fff 60%,
+      #f9f9f9 65%,
+      #fff 70%,
+      #f9f9f9 75%,
+      #fff 80%,
+      #f9f9f9 85%,
+      #fff 90%,
+      #f9f9f9 95%,
+      #fff 100%
+      );
+  }
+  
+  .book_cover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 125px;
+    height: 225px;
+
+    transform: translateZ(-15px);
+    background-color: $brown;
+    border-radius: 0 2px 2px 0;
+
+  }
+

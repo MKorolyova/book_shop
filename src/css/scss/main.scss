@@ -1,0 +1,621 @@
+@import 'vars';
+@import 'fonts';
+
+body{
+    min-width: 1000px;
+    width: 100%;
+    height: 100%;
+}
+
+body > * {
+    margin-bottom: 40px;
+}
+
+
+.customer_registration_background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.customer_registration {
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 50px;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 50px 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    height: fit-content;
+    width: 40%;
+    min-width: 600px;
+}
+
+.loginForm {
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+}
+
+.section{
+    display: grid;
+    grid-template-rows: auto; 
+    justify-items: center;
+    align-items: center; 
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.book_section{
+    display: grid;
+    grid-template-rows: auto; 
+    justify-items: center;
+    align-items: center; 
+    width: 80%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid $gray;
+    box-shadow: 5px 5px 20px $gray;
+}
+
+.cart_section{
+    box-sizing: border-box; 
+    display: grid;
+    grid-template-columns:57% 40%; 
+    gap: 2%; 
+    width: 100%;
+}
+
+.books_section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    padding: 20px 40px; 
+    width: 100%;
+    box-sizing: border-box; 
+    height:fit-content;
+    
+}
+
+.title{
+    @include main-font(400, 30);
+    text-align: center;
+    color: $green;
+}
+
+.subtitle{
+    @include main-font(400, 14);
+    text-align: center;
+    color: $brown;
+}
+
+.menu{
+
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+
+}
+
+.menu_frame {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,  11%);
+        gap: 0px;
+        width: 100%; 
+        
+        .menu_item{
+            display: block;
+            box-sizing: border-box;
+ 
+            justify-content: center;
+            align-items: center;
+            color: $brown;
+            padding: 20px;
+
+
+            text-align: center;
+
+            @include main-font(400, 14)
+            
+        }
+
+}
+
+header{
+    width: 100%;
+}
+
+.background {
+    
+    box-sizing: border-box;
+    display: grid;
+    gap: 30%;
+    grid-template-columns: 25%  auto;
+    position: relative; 
+    padding-top: 100px;
+    padding-right: 100px;
+    width: 100%;
+    height: auto; 
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.background_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+.genre_menu {
+    position: relative; 
+    z-index: 1;
+    width: 100%;  
+    
+    height:fit-content;
+
+    background-color: white;
+
+    .link_button{
+        padding: 20px;
+    }
+}
+
+.sticker{
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 40px;
+    position: relative; 
+    justify-self: end;
+    z-index: 1;
+    width: 100%;  
+    height:fit-content;
+
+    background-color: white;
+
+    p{
+        text-align: start;
+    }
+
+
+}
+
+
+.genre_menu_frame {
+    display: grid;
+    grid-template-rows: auto; 
+    
+
+    .ganre_menu_item{
+        display: block;
+        box-sizing: border-box;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        
+        color: $brown;
+
+        text-align: start;
+
+        @include main-font(400, 14)
+        
+    }
+
+}
+
+.link_button{
+    text-decoration: underline;
+    @include main-font(400, 14);
+    color: $green;
+}
+
+
+.book_swiper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    justify-items: center;
+    padding: 20px 40px; 
+    width: 100%;
+    box-sizing: border-box; 
+    height:fit-content;
+}
+
+.book{
+
+    display: grid;
+    grid-template-rows:auto; 
+    gap: auto; 
+    box-sizing: border-box; 
+    width: 100%;
+    border: 2px solid $gray;
+    padding-top: 20px;
+    box-shadow: 5px 5px 20px $gray;
+    height:auto;
+}
+
+.book_photo{
+    justify-items: center;
+    align-items: center; 
+    width: 100%;
+    height: auto;
+}
+
+.book_info{
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 10px;
+    box-sizing: border-box; 
+    padding: 20px;
+    .title{
+        @include main-font(400, 20);
+        color: $brown;
+        text-align: start;
+        
+        min-height: 90px; 
+        max-height: 90px; 
+
+        overflow: hidden;
+        text-overflow: ellipsis; 
+
+    
+        
+    }
+    .subtitle{
+        @include main-font(400, 14);
+        color: $brown;
+        text-align: start;
+    }
+
+}
+
+.price{
+    box-sizing: border-box; 
+    padding: 20px;
+    padding-left: 0;
+
+    .subtitle{
+        @include main-font(400, 20);
+        color: $green;
+        text-align: start;
+    }
+}
+
+
+.book_buttons{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.green_button, .gray_button {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer; 
+    transition: transform 0.1s ease, box-shadow 0.1s ease; 
+
+    &:active { 
+        transform: scale(0.95);
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); 
+    }
+}
+
+.green_button {
+    background-color: $green;
+    color: white;
+    @include main-font(400, 14);
+}
+
+.gray_button {
+    background-color: $gray;
+    color: $brown;
+    @include main-font(400, 14);
+}
+
+
+.swiper{
+    height: fit-content;
+    padding-left: 70px;
+    padding-right: 70px;
+    box-sizing: border-box;
+}
+
+.swiper-button-prev::after{
+
+    font-size: 30px;
+}
+
+.swiper-button-next::after{
+
+    font-size: 30px;
+}
+
+.swiper-button-prev{
+    box-sizing: border-box; 
+    padding: 30px;
+    border-radius: 50%;
+    background-color: $green;
+    color: white;
+}
+.swiper-button-next{
+    box-sizing: border-box; 
+    padding: 30px;
+    border-radius: 50%;
+    background-color: $green;
+    color: white;
+}
+
+
+  .delivery_items {
+    box-sizing: border-box;
+    display: grid;
+    gap: 30%;
+    grid-template-columns: auto auto  auto;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .delivery_item {
+    display: grid;
+    grid-template-rows: auto; 
+    width: 100%;
+    position: relative;
+
+    .subtitle{
+        text-align: start;
+        padding: 15px;
+        color:  $green;
+        @include main-font(400, 14);
+        width: 100%;
+    }
+  }
+
+  .delivery_number{
+    box-sizing: border-box;
+    text-align: start;
+    padding: 15px;
+    color:  $green;
+    @include main-font(400, 80);
+  }
+  
+
+.delivery_item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -125%; 
+    width: 100%; 
+    height: 2px; 
+    background-color: $green; 
+}
+
+.book_general_info{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 30px 20px;
+    gap: 20px;
+    width: 100%;
+    .green_button{
+        width: 30%;
+    }
+}
+
+.book_aditional_info{
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    .title{
+        @include main-font(400, 20);
+        text-align: start;
+        color: $brown;
+    }
+    
+    .subtitle{
+        @include main-font(400, 14);
+        text-align: start;
+        color: $brown;
+    }
+}
+
+.order_info{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 40px;
+    box-sizing: border-box;
+    align-self: start;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.order_summary {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 30px;
+    border-bottom: 1px solid $brown;
+    .title{
+        text-align: start; 
+        
+    }
+}
+
+.total {
+
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 49% 49%; 
+    gap: 2%;
+    border-bottom: 1px solid $brown;
+    padding-bottom:20px ;
+
+
+    .title{
+        width: 100%;
+        @include main-font(400, 20);
+        color: $brown;
+        justify-self: start;
+        
+    }
+
+    .price{
+
+        @include main-font(400, 20);
+        color: $brown;
+        justify-self: end;
+        padding: 0;
+    }
+}
+
+
+
+.form{
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto; 
+    gap: 20px;
+}
+.input {
+    min-height: 50px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid $brown;
+    font-size: 1em;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid $green; 
+}
+
+
+.order_items{
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto; 
+    align-self: start;
+    gap: 20px;
+
+    .book{
+        box-sizing: border-box;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 30% 70%;
+        justify-content: center;
+    }
+
+    .book_buttons{
+        padding-right: 80px;
+        box-sizing: border-box;
+        display: grid;
+        gap: 40px;
+        grid-template-columns: auto auto;
+    }
+
+    .gray_button{
+        width: 100%;
+    }
+
+    .green_button{
+        width: 100%;
+    }
+
+}
+  
+
+footer{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 90% 10%;
+
+    .genre_menu{
+        width: 100%;
+        border: 2px solid $gray;
+        background-color: white;
+        height: auto;
+    }
+    .genre_menu_frame {
+        justify-content: start;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        height: auto;
+        
+        
+    
+        .menu_item{
+            display: block;
+            box-sizing: border-box;
+            padding: 20px 10px;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            align-content: center;
+            min-height: 30px;
+            height: auto;
+            color: $brown;
+    
+  
+            text-align: center;
+    
+            @include main-font(400, 14)
+      
+        }
+    
+    }
+}
+
+.language{
+    width: 100%;
+    box-sizing: border-box;
+    align-self: center;
+    padding: 30px 15px;
+    min-height: 20px;
+    text-align: center;
+    color: white ;
+    @include main-font(400, 14);
+}
+
+
+
+.green_background{
+    background-color: $green;
+}
+
+.white_text{
+    color: white !important;
+}
+
+.none{
+    display: none;
+}
